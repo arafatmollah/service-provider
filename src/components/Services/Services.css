@@ -2,7 +2,12 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
+    margin-bottom: 20px;
 }
-Card{
-    height: 50px;
+.card a{
+    text-decoration: none;
+    color: white;
+}
+.card a:hover{
+    color:aliceblue;
 }

@@ -3,6 +3,7 @@ import './Home.css'
 import { Button } from 'react-bootstrap';
 import Services from '../Services/Services';
 import Footer from '../Footer/Footer';
+import Destionation from '../Destination/Destionation';
 
 
 const Home = () => {
@@ -18,6 +19,7 @@ const Home = () => {
                     <img className="rounded" src="https://media.istockphoto.com/photos/travel-planning-background-picture-id1309040743?b=1&k=20&m=1309040743&s=170667a&w=0&h=eyIzT1oSW2B5gPMPqgybEseIYIUrY96cxPTE_B0ewVs="></img>
                 </div>
             </div>
+            <Destionation></Destionation>
             <Services></Services>
             <Footer></Footer>
         </div>

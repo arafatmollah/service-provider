@@ -1,0 +1,22 @@
+.destination{
+    position: relative;
+  text-align: center;
+  color: white;
+}
+.destiny{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:20px;   
+}
+.destination img{
+    height: 220px;
+    width: 380px;
+    margin:50px 0px;
+}
+.text{
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 25px;
+  transform: translate(-50%, -50%);
+}

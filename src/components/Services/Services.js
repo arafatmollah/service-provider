@@ -1,5 +1,6 @@
 import React from 'react';
 import {Card, Button} from 'react-bootstrap';
+import {Link} from 'react-router-dom'
 import "./Services.css";
 
 const Services = () => {
@@ -7,60 +8,49 @@ const Services = () => {
         <div>
             <h2 className="mt-5 fs-7 fw-bold text-center">My Services</h2>
             <div className="card mt-5 border-0 container">
-            <Card className="">
+            <Card style={{ width: '18rem'}}>
   <Card.Body>
-    <Card.Title as="h2">Basic</Card.Title>
-    <h3>$20</h3>
+    <Card.Title>Basic</Card.Title>
+    <Card.Title>$40</Card.Title>
     <Card.Text>
-      With supporting text below.
+      We are Offering you!
+      Best Route to Travel
+      Which hotel to book
+        Foods
+      
     </Card.Text>
-    <Card.Text>
-      With supporting text below.
-    </Card.Text>
-    <Card.Text>
-      With supporting text below.
-    </Card.Text>
-    <Button variant="primary">Book Now</Button>
+    <Button variant="danger"><Link to='/checkout'>Booking</Link></Button>
   </Card.Body>
 </Card>
-            <Card>
-  
+<Card style={{ width: '18rem' }}>
   <Card.Body>
-    <Card.Title as="h2">Special</Card.Title>
-    <h3>$30</h3>
+    <Card.Title>Favourite</Card.Title>
+    <Card.Title>$60</Card.Title>
     <Card.Text>
-      With supporting text below.
+     We are offering you!
+     Best Route to Travel
+        Which hotel to book
+        Food
+        Places
+
     </Card.Text>
-    <Card.Text>
-      With supporting text below.
-    </Card.Text>
-    <Card.Text>
-      With supporting text below.
-    </Card.Text>
-    <Button variant="primary">Book Now</Button>
+    <Button variant="danger"><Link to='/checkout'>Booking</Link></Button>
   </Card.Body>
 </Card>
-            <Card>
- 
+<Card style={{ width: '18rem' }}>
   <Card.Body>
-    <Card.Title as="h2">Premium</Card.Title>
-    <h3>$40</h3>
+    <Card.Title>Premium</Card.Title>
+    <Card.Title>$100</Card.Title>
     <Card.Text>
-      With supporting text below
+    We are offering you!
+      Best Route to Travel
+      Which hotel to book
+      Food
+      Best place
+        Sports Activity
+      
     </Card.Text>
-    <Card.Text>
-      With supporting text below
-    </Card.Text>
-    <Card.Text>
-      With supporting text below
-    </Card.Text>
-    <Card.Text>
-      With supporting text below
-    </Card.Text>
-    <Card.Text>
-      With supporting text below
-    </Card.Text>
-    <Button variant="primary">Book Now</Button>
+    <Button variant="danger"><Link to='/checkout'>Booking</Link></Button>
   </Card.Body>
 </Card>
             </div>
