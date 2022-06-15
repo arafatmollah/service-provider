@@ -2,12 +2,13 @@ import React from 'react';
 import './Home.css'
 import { Button } from 'react-bootstrap';
 import Services from '../Services/Services';
+import Footer from '../Footer/Footer';
 
 
 const Home = () => {
     return (
-        <div className="container">
-            <div className="banner mt-5 mb-5">
+        <div className="">
+            <div className="banner mt-5 mb-5 container">
                 <div className="mt-5">
                     <h1 className="fs-7"><span className="fs-10 fw-bold text-primary">Travel Agent</span> <br></br> Help you to find destination</h1>
                     <p>If you are a travel peples who love yo travel all over the world then i am here for to to guide all over things about travel start with flight or by route service hotel/ motel destination place food guide you to where you should travel based on season.</p>
@@ -18,6 +19,7 @@ const Home = () => {
                 </div>
             </div>
             <Services></Services>
+            <Footer></Footer>
         </div>
     );
 };
