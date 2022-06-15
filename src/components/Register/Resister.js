@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import {getAuth} from 'firebase/auth';
 import app from '../../firebase.init';
 
 const auth = getAuth(app);
 const Resister = () => {
+  let [signInWithGoogle, user] = useSignInWithGoogle(auth);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [
+  let [
     createUserWithEmailAndPassword,
-    user,
+    users,
     loading,
     error,
   ] = useCreateUserWithEmailAndPassword(auth);
@@ -25,10 +26,10 @@ const Resister = () => {
   if (loading) {
     return <p>Loading...</p>;
   }
-  if (user) {
+  if (users) {
     return (
       <div>
-        <p>Registered User: {user.email}</p>
+        <p>Registered User: {users.email}</p>
       </div>
     );
   }
@@ -61,7 +62,7 @@ const Resister = () => {
   <Button onClick={() => createUserWithEmailAndPassword(email, password)} variant="primary" type="submit">
     Submit
   </Button>
-  <Button>SignUP with Google</Button>
+  <Button onClick={() => signInWithGoogle()}>SignUP with Google</Button>
 </Form>
             </div>
         </div>

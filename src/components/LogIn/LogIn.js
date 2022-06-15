@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import {getAuth} from 'firebase/auth';
 import app from '../../firebase.init';
 
 const auth = getAuth(app);
 
 const LogIn = () => {
+  let [signInWithGoogle] = useSignInWithGoogle(auth);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [
@@ -58,6 +59,7 @@ const LogIn = () => {
   <Button onClick={() => signInWithEmailAndPassword(email, password)} variant="success" type="submit">
     Submit
   </Button>
+  <Button onClick={() => signInWithGoogle()}>Sign In with Google</Button>
 </Form>
             </div>
         </div>
