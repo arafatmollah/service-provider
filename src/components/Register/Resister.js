@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
-import {getAuth} from 'firebase/auth';
+import {getAuth, sendEmailVerification} from 'firebase/auth';
 import app from '../../firebase.init';
+
 
 const auth = getAuth(app);
 const Resister = () => {
@@ -15,11 +16,19 @@ const Resister = () => {
     loading,
     error,
   ] = useCreateUserWithEmailAndPassword(auth);
-  
+  const emailverify = ()=>{
+    sendEmailVerification(auth.currentUser)
+    .then(() => {
+      
+    });
+  }  
 if(error){
   return(
     <div>Error: {error.message}</div>
   )
+}
+else{
+  emailverify();
 }
   
     return (
@@ -34,7 +43,7 @@ if(error){
     <Form.Label>Email address</Form.Label>
 
     <Form.Control type="email" value={email}
-    onChange={(e) => setEmail(e.target.value)} placeholder="Enter email" />
+    onChange={(e) => setEmail(e.target.value)} placeholder="Enter email" required/>
     <Form.Text className="text-muted">
       We'll never share your email with anyone else.
     </Form.Text>
@@ -43,15 +52,15 @@ if(error){
   <Form.Group className="mb-3" controlId="formBasicPassword">
     <Form.Label>Password</Form.Label>
     <Form.Control type="password" value={password}
-    onChange={(e) => setPassword(e.target.value)} placeholder="Password" />
+    onChange={(e) => setPassword(e.target.value)} placeholder="Password" required/>
   </Form.Group>
   <Form.Group className="mb-3" controlId="formBasicCheckbox">
-    <Form.Check type="checkbox" label="Check me out" />
+    <Form.Check type="checkbox" label="Check me out" required/>
   </Form.Group>
   <Button onClick={() => createUserWithEmailAndPassword(email, password)} variant="primary" type="submit">
     Submit
   </Button>
-  <Button onClick={() => signInWithGoogle()}>SignUP with Google</Button>
+  <Button className="m-3" onClick={() => signInWithGoogle()}>SignUP with Google</Button>
 </Form>
             </div>
         </div>
