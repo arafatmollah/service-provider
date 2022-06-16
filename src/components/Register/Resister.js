@@ -15,18 +15,13 @@ const Resister = () => {
     loading,
     error,
   ] = useCreateUserWithEmailAndPassword(auth);
-  if (error) {
-    return (
-      <div>
-        <p>Error: {error.message}</p>
-      </div>
-    );
-  }
-  if(users){
-    return (
-      <div>{users.email}</div>
-    )
-  }
+  
+if(error){
+  return(
+    <div>Error: {error.message}</div>
+  )
+}
+  
     return (
         <div className="container shadow mt-4 p-3 mb-5 bg-body rounded">
             <h2 className='text-center text-primary mt-2'>Registration Your Details</h2>

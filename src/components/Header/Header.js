@@ -15,7 +15,8 @@ const Header = () => {
         
         <nav className="container">
          <Link to='/'>Home</Link>   
-        <Link to='/blogs'>Blogs</Link>  
+        <Link to='/blogs'>Blogs</Link>
+        <Link to='/about'>About</Link>  
         <Link to="/checkout">Checkout</Link>  
         <span>{user?.displayName && user?.displayName}</span>
         <span>{user?.email && user?.email}</span>

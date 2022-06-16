@@ -30,7 +30,7 @@ const LogIn = () => {
   if (user) {
     return (
       <div>
-        <p>Signed In User: {user.email}</p>
+        <p>Signed In User: {user?.email}</p>
       </div>
     );
   }
