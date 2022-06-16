@@ -8,6 +8,12 @@ nav{
     display: flex;
     align-items: center;
 }
+@media only screen and (max-width: 600px) {
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+    }
+}
 .login{
     background-color: rgb(148, 148, 255);
     padding: 10px 20px;

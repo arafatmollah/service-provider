@@ -16,7 +16,7 @@ const Home = () => {
                     <Button variant="success" className="p-2">Book Now</Button>
                 </div>
                 <div>
-                    <img className="rounded" src="https://media.istockphoto.com/photos/travel-planning-background-picture-id1309040743?b=1&k=20&m=1309040743&s=170667a&w=0&h=eyIzT1oSW2B5gPMPqgybEseIYIUrY96cxPTE_B0ewVs="></img>
+                    <img className="rounded banner-img" src="https://media.istockphoto.com/photos/travel-planning-background-picture-id1309040743?b=1&k=20&m=1309040743&s=170667a&w=0&h=eyIzT1oSW2B5gPMPqgybEseIYIUrY96cxPTE_B0ewVs="></img>
                 </div>
             </div>
             <Destionation></Destionation>

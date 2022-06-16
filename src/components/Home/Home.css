@@ -3,6 +3,17 @@
     grid-template-columns: 1fr 1fr;
     gap: 20px;
 }
+@media only screen and (max-width: 600px) {
+    .banner {
+      display: grid;
+      grid-template-columns: 1fr;
+      row-gap:20px;
+      max-width: fit-content;
+    }
+    .banner-img{
+        width: 100%;
+    }
+  }
 
 .banner h1{
     margin-top: auto;
