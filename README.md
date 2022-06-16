@@ -3,7 +3,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
-## [go-world-arafat.netlyfy.app](Live Link)
+## [Live Link](https://go-world-arafat.netlify.app/)
 
 In the project directory, you can run:
 
