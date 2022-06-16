@@ -15,7 +15,6 @@ const Resister = () => {
     loading,
     error,
   ] = useCreateUserWithEmailAndPassword(auth);
-
   if (error) {
     return (
       <div>
@@ -23,15 +22,10 @@ const Resister = () => {
       </div>
     );
   }
-  if (loading) {
-    return <p>Loading...</p>;
-  }
-  if (users) {
+  if(users){
     return (
-      <div>
-        <p>Registered User: {users.email}</p>
-      </div>
-    );
+      <div>{users.email}</div>
+    )
   }
     return (
         <div className="container shadow mt-4 p-3 mb-5 bg-body rounded">

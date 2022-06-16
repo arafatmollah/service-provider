@@ -4,6 +4,8 @@ import './Header.css';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import {getAuth, signOut} from 'firebase/auth';
 import app from '../../firebase.init';
+import {Button} from 'react-bootstrap';
+
 
 const auth = getAuth(app);
 
@@ -16,6 +18,7 @@ const Header = () => {
         <Link to='/blogs'>Blogs</Link>  
         <Link to="/checkout">Checkout</Link>  
         <span>{user?.displayName && user?.displayName}</span>
+        <span>{user?.email && user?.email}</span>
         {
             user?.uid
             ?

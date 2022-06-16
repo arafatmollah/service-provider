@@ -16,7 +16,7 @@ const LogIn = () => {
     loading,
     error,
   ] = useSignInWithEmailAndPassword(auth);
-
+  
   if (error) {
     return (
       <div>
@@ -34,6 +34,8 @@ const LogIn = () => {
       </div>
     );
   }
+
+ 
     return (
         <div className="container mt-4 shadow p-3 mb-5 bg-body rounded">
             <h1 className='text-center text-danger mt-2'>Please LogIn Here</h1>
