@@ -6,7 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## [Travel Agent](https://go-world-arafat.netlify.app/)
 
 ### The things I am using while build this project
-## `React JS`
+## <li>`React JS`</li>
 
 
 In the project directory, you can run:
