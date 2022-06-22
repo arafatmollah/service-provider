@@ -2,8 +2,12 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
-## [Live Link](https://go-world-arafat.netlify.app/)
+## Live Link
+## [Travel Agent](https://go-world-arafat.netlify.app/)
+
+### The things I am using while build this project
+## `React JS`
+
 
 In the project directory, you can run:
 
