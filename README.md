@@ -7,6 +7,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### The things I am using while build this project
 ## <li>`React JS`</li>
+## <li>`React BootStrap`</li>
+## <li>`React Router`</li>
+## <li>`Firebase`</li>
+## <li>`Firebase Hooks`</li>
+
 
 
 In the project directory, you can run:
